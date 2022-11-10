@@ -1,21 +1,18 @@
 import logging
-import signal
-import sys
-import time
 import datetime
 
-import matplotlib.pyplot as plt
-import numpy as np
-
 from tkinter import *
+from tkinter import messagebox
 from tkinter.filedialog import askopenfilename
 from tkinter.filedialog import asksaveasfilename
 
-from lasertracker import *
 from bam_LT_fxns import *
 import bam_LT_fxns
 
-import redis
+try:
+    import redis
+except ImportError:
+    redis = None
 import yaml
 from functools import partial
 
@@ -33,12 +30,20 @@ print(config)
 lt_host = config['laser_tracker']['host']
 lt_type = config['laser_tracker']['type']
 
+goto_manually = True  # when fiducials are pointed by hand or not depends on the tracker
 
 if lt_type == 'leica_at4xx':
     import leica_at4xx as lt
+    goto_manually = True
+elif lt_type == 'spatial_analyzer':
+    import spatial_analyzer as lt
+    goto_manually = False
+elif lt_type == 'simulator':
+    goto_manually = False
+    import simulator as lt
 else:
     print('Unknown laser tracker type', lt_type)
-    exit(1)
+    sys.exit(1)
 
 # script 1
 def signal_handler(signal, frame):
@@ -76,17 +81,17 @@ def measureRetro(laser_tracker, index, use_saved_position=False):
 
     global cesapi_positions
 
-    if use_saved_position:
+    if use_saved_position or not goto_manually:
         laser_tracker.goto_position(cesapi_positions[index])
 
-    cesapi_positions[index] = laser_tracker.measure()
+    cesapi_positions[index], err = laser_tracker.measure()
     global trackerpilot_positions
     trackerpilot_positions[index] = cesapi_positions[index]
 
     #autosave
     np.savetxt("tempbenchcoords.txt", cesapi_positions)
 
-    ltlog(retro_id=index, mode='fixed', coordsys='LT', xyz=cesapi_positions[index], err=[laser_tracker.measurement.dStd1, laser_tracker.measurement.dStd2, laser_tracker.measurement.dStd3],redis_connection=myredis)
+    ltlog(retro_id=index, mode='fixed', coordsys='LT', xyz=cesapi_positions[index], err=err,redis_connection=myredis)
 
 def measureAll(laser_tracker,max=None):
     if max==None:
@@ -253,8 +258,8 @@ def Adjust(mode="mirror", *args):
     print("In Adjust")
 
     # Save the current position
-    # 
-    place_to_measure = laser_tracker.measure()
+    #
+    place_to_measure, _ = laser_tracker.measure()
     
     # Remeasure all the previously measured positions without human hands touching
     #
@@ -337,9 +342,8 @@ def scanning(mode):
 
         logger.info('Measuring reflector..')
 
-        measured_LT = np.array(laser_tracker.measure())
-        measurement = laser_tracker.measurement
-        
+        measured_LT, measurement_std = np.array(laser_tracker.measure())
+
         print('Measured SMR at LTXYZ: ', measured_LT)
         
         # Transform into the local optic coordinate system
@@ -358,7 +362,7 @@ def scanning(mode):
         print("Measured position in optic coordsys: ", measured_optic)
         print("Position error in optic coordsys: ", diffxyz)
 
-        ltlog(retro_id = -1, mode=mode, coordsys='LT',    xyz=measured_LT, err=[measurement.dStd1, measurement.dStd2, measurement.dStd3],redis_connection=myredis)
+        ltlog(retro_id = -1, mode=mode, coordsys='LT',    xyz=measured_LT, err=measurement_std,redis_connection=myredis)
         ltlog(retro_id = -1, mode=mode, coordsys='bench', xyz=measured_bench,redis_connection=myredis)
         ltlog(retro_id = -1, mode=mode, coordsys='zemax', xyz=measured_zemax, zemax_file=zemax_prescrip_fname,zemax_surf=int(surface_number.get()),redis_connection=myredis)
         ltlog(retro_id = -1, mode=mode, coordsys='optic', xyz=measured_optic, zemax_file=zemax_prescrip_fname,zemax_surf=int(surface_number.get()),redis_connection=myredis)
@@ -400,7 +404,10 @@ running = False  # Global Flag
 permanent_smrs = np.loadtxt("permbench.txt")
 
 #
-myredis = redis.Redis()
+if redis is not None:
+    myredis = redis.Redis()
+else:
+    myredis = None
 
 # gui
 tk = Tk()

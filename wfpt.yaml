@@ -1,6 +1,6 @@
 laser_tracker:
-    type: leica_at4xx
-    host: 192.168.1.243
+    type: simulator
+    host: localhost
 
 Zemax_origin_in_benchcoordinates: [155.63, 1537.35, -171.1]
 

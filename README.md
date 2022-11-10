@@ -21,6 +21,14 @@ will require development of a light interface to support connection, initializai
 * Copy the configuration file wfpt.yaml to your_project.yaml
 * Edit ltoptics.py and change the config file name to your_project.yaml
 
+### Installing with conda
+
+```console
+  $ conda create -n ltoptics
+  $ conda activate ltoptics
+  $ conda install tk matplotlib scikit-learn pandas numpy pyyaml
+```
+
 ### Configuration file explained
 
 ```

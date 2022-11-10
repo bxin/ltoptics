@@ -80,9 +80,12 @@ class LaserTracker():
         #reset()
 
     def measure(self):
+        """
+        returns position and associated standard deviation
+        """
         CESAPI.refract.SetRefractionIndex(self.command, self.ri_algorithm)
-        self.measurement =  self.command.StartMeasurement()
-        return ([self.measurement.dVal1, self.measurement.dVal2, self.measurement.dVal3])
+        measurement = self.command.StartMeasurement()
+        return [measurement.dVal1, measurement.dVal2, measurement.dVal3], [measurement.dStd1, measurement.dStd2, measurement.dStd3]
 
     def goto_position(self, position):
         self.command.GoPosition(True, position[0], position[1], position[2])
