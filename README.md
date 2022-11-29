@@ -29,6 +29,12 @@ will require development of a light interface to support connection, initializai
   $ conda install tk matplotlib scikit-learn pandas numpy pyyaml
 ```
 
+For using Spatial Analyzer on Windows (optional)
+
+```console
+  $ conda install pywin32
+```
+
 ### Configuration file explained
 
 ```
