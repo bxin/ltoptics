@@ -20,7 +20,9 @@ from functools import partial
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-config_file = 'wfpt.yaml'
+#config_file = 'wfpt.yaml'
+config_file = 'hdfs0.yaml'
+#config_file = 'test.yaml'
 
 with open(config_file, 'r') as f:
     config = yaml.safe_load(f)
@@ -66,7 +68,7 @@ def ltlog(retro_id, zemax_surf = -1, mode = 'smr', coordsys='LT', xyz=[0,0,0], e
     dt = datetime.datetime.now()
     dt_string = dt.strftime('%Y-%m-%dT%H:%M:%S')
     log_str = '%s\t%d\t%d\t%s\t%s\t%9.3f\t%9.3f\t%9.3f\t%6.3f\t%6.3f\t%6.3f\t%s\n' % ( dt_string, retro_id, zemax_surf, mode, coordsys, xyz[0], xyz[1], xyz[2],err[0],err[1],err[2],zemax_file)
-    print('LOG: ', log_str)
+    print('---LOG: ', log_str)
     with open('lt.log', 'a') as f :
         f.write(log_str)
     if redis_connection is not None:
@@ -81,8 +83,11 @@ def measureRetro(laser_tracker, index, use_saved_position=False):
 
     global cesapi_positions
 
+    print('in measureRetro: use_saved_position? ', use_saved_position)
+    print('in measureRetro: goto_manually? ', goto_manually)
     if use_saved_position or not goto_manually:
-        laser_tracker.goto_position(cesapi_positions[index])
+        if np.any(cesapi_positions[index] != [1, 1, 1]):
+            laser_tracker.goto_position(cesapi_positions[index])
 
     cesapi_positions[index], err = laser_tracker.measure()
     global trackerpilot_positions
@@ -90,12 +95,15 @@ def measureRetro(laser_tracker, index, use_saved_position=False):
 
     #autosave
     np.savetxt("tempbenchcoords.txt", cesapi_positions)
+    print("------autosave----")
+    print(cesapi_positions)
 
     ltlog(retro_id=index, mode='fixed', coordsys='LT', xyz=cesapi_positions[index], err=err,redis_connection=myredis)
 
 def measureAll(laser_tracker,max=None):
     if max==None:
         max = len(cesapi_positions)
+    print('in measureAll, max = ', max, cesapi_positions)
     for i in range(max):
         if np.any(cesapi_positions[i] != [1, 1, 1]):
             print(i,cesapi_positions[i])
@@ -105,6 +113,7 @@ def measureAll(laser_tracker,max=None):
 # SVD rotation to find unmeasured SMRs from measured
 def SVD_Rotation(cesapi_positions, trackerpilot_positions, SMRs_measured_trackerpilot):
 
+    print ("in SVD_Rotation() ")
     print ("cesapi_positions: ")
     print(cesapi_positions)
 
@@ -131,7 +140,8 @@ def SVD_Rotation(cesapi_positions, trackerpilot_positions, SMRs_measured_tracker
 
     j = 0
     for i in [0, 1, 2, 3, 4]:
-        if np.any(cesapi_positions[i] != [1, 1, 1]):
+        if np.any(cesapi_positions[i] != [1, 1, 1]) and j<3:
+            print(i, '-------------', cesapi_positions[i], Q, j)
             Q[j] = trackerpilot_positions[i]
             P[j] = SMRs_measured_trackerpilot[i]
             j = j+1
@@ -200,6 +210,7 @@ def load():
 
     trackerpilot_positions = np.loadtxt(file)
 
+    print('in load() ')
     print(cesapi_positions)
     print(trackerpilot_positions)
 
@@ -210,6 +221,7 @@ def save():
     running = False
 
     global cesapi_positions
+    print('in save()')
     np.savetxt(asksaveasfilename(), cesapi_positions)
 
 
@@ -226,6 +238,7 @@ def reset():
         [1., 1., 1.],
         [1., 1., 1.],
         [1., 1., 1.]])
+    print('in reset()')
     print(cesapi_positions)
 
     global trackerpilot_positions
@@ -242,8 +255,6 @@ def reset():
 #  adjusts mirror or SMR
 def Adjust(mode="mirror", *args):
 
-    print('In Adjust')
-    
     global running
 
     global zemax_prescrip_fname
@@ -255,16 +266,20 @@ def Adjust(mode="mirror", *args):
     global benchinfo
     global config
 
+    print(cesapi_positions)
     print("In Adjust")
-
+    print(cesapi_positions)
+    
     # Save the current position
-    #
+    # This is the position of the "Mirror Measurement SMR".
     place_to_measure, _ = laser_tracker.measure()
+    print("place to measure:")
+    print(place_to_measure)
     
     # Remeasure all the previously measured positions without human hands touching
     #
     print("Measuring previous positions")
-    measureAll(laser_tracker,max=5)
+    measureAll(laser_tracker,max=5) #index 0 - 4, all except #5 = "Mirror Measurement SMR"
     
     # Go back to the place we started
     #
@@ -273,7 +288,9 @@ def Adjust(mode="mirror", *args):
     #command.GoPosition(True,place_to_measure.dVal1, place_to_measure.dVal2, place_to_measure.dVal3)
 
     data, smr = SVD_Rotation(cesapi_positions, trackerpilot_positions, permanent_smrs)
-
+    print("smr")
+    print(smr)
+    
     if zemax_prescrip_fname == "No Zemax File Selected!":
         messagebox.showerror("ERROR", "No Zemax File Selected!")
     elif surface_number.get() == '':
@@ -338,6 +355,7 @@ def scanning(mode):
     global benchinfo
     global label0, label1, label2
 
+    print("in scanning() ")
     if running == True:
 
         logger.info('Measuring reflector..')
@@ -357,9 +375,10 @@ def scanning(mode):
         nominal_optic = benchinfo.transform_Zemax_to_optic(nominal_zemax)
 
         diffxyz = measured_optic - nominal_optic
+        print("norminal optic (component) position: ", nominal_optic, " (within its own CSYS)")
         print("Measured position in bench coordsys: ", measured_bench)
         print("Measured position in zemax coordsys: ", measured_zemax)
-        print("Measured position in optic coordsys: ", measured_optic)
+        print("Measured position in optic coordsys: ", measured_optic, " (still within zemax)")
         print("Position error in optic coordsys: ", diffxyz)
 
         ltlog(retro_id = -1, mode=mode, coordsys='LT',    xyz=measured_LT, err=measurement_std,redis_connection=myredis)
@@ -369,7 +388,7 @@ def scanning(mode):
 
         
         if mode == 'smr':
-            label0.set( 'X: {:8.3f} mm | '.format(diffxyz[1]))
+            label0.set( 'X: {:8.3f} mm | '.format(diffxyz[1])) #x as y, y as x? will have to try knobs
             label1.set( 'Y: {:8.3f} mm | '.format(diffxyz[0]))
             label2.set( 'Z: {:8.3f} mm'.format(diffxyz[2]))
             ltlog(retro_id = -1, mode=mode, coordsys='diff' , xyz=[diffxyz[1],diffxyz[0],diffxyz[2]],redis_connection=myredis)
@@ -400,8 +419,11 @@ def initialize(laser_tracker):
 running = False  # Global Flag
 
 # permanent SMR measurements for SVD Rotation
-#
-permanent_smrs = np.loadtxt("permbench.txt")
+# The order/indexing is defined in xxxx.yaml
+permanent_smrs = np.loadtxt("permbench.txt") #size = 6x3
+print("loading permbench.txt")
+print("DO NOT INITIALIZE UNLESS YOU'VE MOVED THE LASER TRACKER")
+print("IF YOU DID, YOU NEED TO REMEASURE AT LEAST 3 OUT OF THE 5 PERMANENT SMRs")
 
 #
 if redis is not None:
@@ -422,16 +444,23 @@ zemax_prescrip_fname = 'No Zemax File Selected!'
 surface_number = StringVar()
 
 # arrays for retro coordinates
-cesapi_positions = np.loadtxt("tempbenchcoords.txt")
+cesapi_positions = np.loadtxt("tempbenchcoords.txt") #size = 6x3
 
-trackerpilot_positions = np.loadtxt("tempbenchcoords.txt")
+trackerpilot_positions = np.loadtxt("tempbenchcoords.txt") #size = 6x3
+
+cesapi_positions = permanent_smrs.copy()
+trackerpilot_positions = permanent_smrs.copy()
 
 nominal = 1
 
 smr_real_posn_LTXYZ = 1
 benchinfo = 1
 
+print("before lt def")
+print(cesapi_positions)
 laser_tracker = lt.LaserTracker(lt_host, logger)
+print("after lt def")
+print(cesapi_positions)
 
 # initialize button
 Button(tk, text="Initialize", command=lambda: initialize(laser_tracker), bg="cyan").grid(
@@ -510,5 +539,6 @@ for child in zemax_frame.winfo_children():
     child.grid_configure(padx=5, pady=5)
 for child in adjust_frame.winfo_children():
     child.grid_configure(padx=5, pady=5)
-
+print("before main loop")
+print(cesapi_positions)
 tk.mainloop()

@@ -219,6 +219,8 @@ class ZemaxData:
                 beginning_of_data = i + 8
                 print('Beginning of global coords:', beginning_of_data)
 
+        #only this section of the zemax txt file is relevant.
+        #each zemax surface takes 4 lines in the txt file
         lines = all_lines[beginning_of_data:beginning_of_data+(5*(nSurf-1))] # 5*nsurf-1
 
         self.comment  = [None] * nSurf

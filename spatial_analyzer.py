@@ -11,7 +11,7 @@ class LaserTracker:
         self.log = logger
         self.instrument_id = None
         self.instrument_name = None
-        self.last_point_name = ""
+        self.last_point_name = f"{str(hash(str(self.i_pt)))[:6]}_AlignmentPt-{self.i_pt}"
 
         print("connect")
         self.log.info("Connecting to SpatialAnalyzer...")
@@ -23,10 +23,10 @@ class LaserTracker:
         self.client.SetStep("Get Last Instrument Index")
         self.client.GetIntegerArg("Instrument ID", aux_i)
 
-        self.log.info("checking if instrument is located")
-        aux_i = win32com.client.VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0.0)
-        self.client.SetStep("Get Last Instrument Index")
-        self.client.GetIntegerArg("Instrument ID", aux_i)
+        #self.log.info("checking if instrument is located")
+        #aux_i = win32com.client.VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0.0)
+        #self.client.SetStep("Get Last Instrument Index")
+        #self.client.GetIntegerArg("Instrument ID", aux_i)
 
         # set units to millimeters
         self.client.SetStep("Set Active Units")
