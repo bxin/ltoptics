@@ -20,9 +20,10 @@ from functools import partial
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-#config_file = 'wfpt.yaml'
-config_file = 'hdfs0.yaml'
 #config_file = 'test.yaml'
+#config_file = 'wfpt.yaml'
+#config_file = 'OAP1.yaml'
+config_file = 'OAP2.yaml'
 
 with open(config_file, 'r') as f:
     config = yaml.safe_load(f)

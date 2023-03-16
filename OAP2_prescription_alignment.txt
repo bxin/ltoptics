@@ -1,0 +1,482 @@
+System/Prescription Data
+
+File : C:\Users\bxin\OneDrive - GMTO Corp\Zemax\HDFS\OAP2.ZOS
+Title: 
+Date : 3/13/2023
+Configuration 1 of 2
+
+GENERAL LENS DATA:
+
+Surfaces                : 	              13
+Stop                    : 	               1
+System Aperture         : 	Entrance Pupil Diameter = 	100
+Fast Semi-Diameters     :	On 
+Field Unpolarized       :	On
+Convert thin film phase to ray equivalent :	On 
+J/E Conversion Method   :	X Axis Reference  
+Glass Catalogs          : 	SCHOTT 
+Ray Aiming              :	Off
+Apodization             : 	Uniform, factor = 	   0.00000E+00
+Reference OPD           :	Exit Pupil  
+Paraxial Rays Setting   :	Ignore Coordinate Breaks  
+Method to Compute F/#   :	Tracing Rays  
+Method to Compute Huygens Integral   : Auto
+Print Coordinate Breaks :	On
+Multi-Threading         :	On
+OPD Modulo 2 Pi         :	Off
+Temperature (C)         : 	    2.00000E+01
+Pressure (ATM)          : 	    1.00000E+00
+Adjust Index Data To Environment  :	Off
+Effective Focal Length  :	         383.781	(in air at system temperature and pressure)
+Effective Focal Length  :	         383.781	(in image space)
+Back Focal Length       :	        -383.781
+Total Track             :	          630.42
+Image Space F/#         :	         3.83781
+Paraxial Working F/#    :	         3.83781
+Working F/#             :	        3.877399
+Image Space NA          :	       0.1291908
+Object Space NA         :	           5e-09
+Stop Radius             :	              50
+Paraxial Image Height   :	               0
+Paraxial Magnification  :	               0
+Entrance Pupil Diameter :	             100
+Entrance Pupil Position :	               0
+Exit Pupil Diameter     :	        226.6934
+Exit Pupil Position     :	       -653.3266
+Field Type              : 	Angle in degrees
+Maximum Radial Field    :	               0
+Primary Wavelength [m] :	          0.6328
+Angular Magnification   :	       0.4560387
+Lens Units              :	   Millimeters
+Source Units            :	   Watts 
+Analysis Units          :	   Watts/cm^2 
+Afocal Mode Units       :	   milliradians
+MTF Units               :	   cycles/millimeter 
+Include Calculated Data in Session File  :	On 
+Include Calculated Data in Session File  :	On 
+ 
+Fields          : 1
+Field Type              : 	Angle in degrees
+ #  	   X-Value     	  Y-Value     	   Weight
+ 1 	      0.000000 	      0.000000 	      1.000000
+ 
+Vignetting Factors
+ #     	VDX     	VDY     	VCX     	VCY     	VAN
+ 1 	 0.000000 	 0.000000 	 0.000000 	 0.000000 	 0.000000
+ 
+Wavelengths     : 1
+Units: m
+ #       	Value       	Weight
+ 1 	      0.632800 	      1.000000
+ 
+Predicted coordinate ABCD matrix:
+A = 	       288.2
+B = 	  -2.711e-14
+C = 	   -1.54e-09
+D = 	       288.2
+ 
+SURFACE DATA SUMMARY:
+
+Surf       	Type        	Radius        	Thickness           	Glass      	  Clear Diam   	  Chip Zone  	  Mech Diam       	   Conic        	Comment
+ OBJ	 STANDARD	       Infinity	       Infinity	                     	             0	             0	             0	              0	 
+ STO	 STANDARD	       Infinity	          558.8	                     	            35	             0	          50.8	              0	 
+   2	 IRREGULA	       -767.562	             17	               MIRROR	            35	             0	            14	             -1	 OAP2
+   3	 STANDARD	       Infinity	          1.524	                     	            35	             0	          50.8	              0	 OAP Mnt back surf
+   4	 STANDARD	       Infinity	          0.115	                     	            35	             0	          50.8	              0	 tape
+   5	 STANDARD	       Infinity	              6	                     	            35	             0	          50.8	              0	 flat mirror
+   6	 STANDARD	       Infinity	             -6	                     	            35	             0	          76.2	              0	 
+   7	 STANDARD	       Infinity	         -0.115	                     	            35	             0	          50.8	              0	 
+   8	 STANDARD	       Infinity	         -1.524	                     	            35	             0	          50.8	              0	 
+   9	 STANDARD	       Infinity	            -17	                     	            35	             0	          50.8	              0	 
+  10	 STANDARD	       Infinity	       -383.781	                     	            35	             0	          50.8	              0	 
+  11	 COORDBRK	              -	              0	                     	             -	             -	             -	              -	 
+  12	 STANDARD	       Infinity	           -222	                     	            10	             0	            10	              0	 
+ IMA	 STANDARD	       Infinity	               	                     	            28	             0	            28	              0	 
+ 
+
+
+SURFACE DATA DETAIL:
+
+Surface OBJ STANDARD 
+
+Surface STO STANDARD 
+
+Surface   2 IRREGULA OAP2
+Mirror Substrate         : Flat, Thickness = 1.50000E+01
+Tilt/Decenter            :      Decenter X      Decenter Y          Tilt X          Tilt Y          Tilt Z          Order
+Before surface           :                0             -60               0               0               0 Decenter, Tilt
+After surface            :               -0              60              -0              -0              -0 Tilt, Decenter
+Decenter X               :                0
+Decenter Y               :                0
+Tilt X                   :                0
+Tilt Y                   :                0
+Spherical                :                0
+Astigmatism              :                0
+Coma                     :                0
+Angle                    :                0
+Aperture                 : Circular Aperture
+Minimum Radius           :                0
+Maximum Radius           :                7
+X- Decenter              :                0
+Y- Decenter              :               60
+
+Surface   3 STANDARD OAP Mnt back surf
+
+Surface   4 STANDARD tape
+
+Surface   5 STANDARD flat mirror
+
+Surface   6 STANDARD 
+
+Surface   7 STANDARD 
+
+Surface   8 STANDARD 
+
+Surface   9 STANDARD 
+
+Surface  10 STANDARD 
+
+Surface  11 COORDBRK 
+Decenter X               :                0
+Decenter Y               :              -60
+Tilt About X             :       -8.9393957
+Tilt About Y             :                0
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  12 STANDARD 
+
+Surface IMA STANDARD 
+ 
+EDGE THICKNESS DATA:
+
+Surf        	 X-Edge        	 Y-Edge
+ STO 	    558.768081 	    558.768081
+   2 	     17.031919 	     17.031919
+   3 	      1.524000 	      1.524000
+   4 	      0.115000 	      0.115000
+   5 	      6.000000 	      6.000000
+   6 	     -6.000000 	     -6.000000
+   7 	     -0.115000 	     -0.115000
+   8 	     -1.524000 	     -1.524000
+   9 	    -17.000000 	    -17.000000
+  10 	   -383.781000 	   -383.781000
+  11 	      0.000000 	      0.000000
+  12 	   -222.000000 	   -222.000000
+ IMA 	      0.000000 	      0.000000
+ 
+MULTI-CONFIGURATION DATA:
+
+Configuration   1:
+
+  1 Comment       :                        
+
+Configuration   2:
+
+  1 Comment       :                        
+ 
+SOLVE AND VARIABLE DATA:
+
+ Semi Diameter   1      : Fixed
+ Mech Semi Diameter   1 : Fixed
+ Semi Diameter   2      : Fixed
+ Semi Diameter   3      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter   3 : Fixed
+ Semi Diameter   4      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter   4 : Solve, pickup from surface 1 scaled by 1
+ Semi Diameter   5      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter   5 : Solve, pickup from surface 1 scaled by 1
+ Thickness of   6       : Solve, Pickup from surface 5 scaled by -1, offset by 0
+ Semi Diameter   6      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter   6 : Fixed
+ Thickness of   7       : Solve, Pickup from surface 4 scaled by -1, offset by 0
+ Semi Diameter   7      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter   7 : Solve, pickup from surface 1 scaled by 1
+ Thickness of   8       : Solve, Pickup from surface 3 scaled by -1, offset by 0
+ Semi Diameter   8      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter   8 : Solve, pickup from surface 1 scaled by 1
+ Thickness of   9       : Solve, Pickup from surface 2 scaled by -1, offset by 0
+ Semi Diameter   9      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter   9 : Solve, pickup from surface 1 scaled by 1
+ Thickness of  10       : Solve, Pickup from Radius on surface 2 scaled by 0.5, offset by 0
+ Semi Diameter  10      : Solve, pickup from surface 2 scaled by 1
+ Mech Semi Diameter  10 : Solve, pickup from surface 1 scaled by 1
+ Parameter  2 Surf  11  : Solve, Chief ray follow field 1, wavelength 0
+ Parameter  3 Surf  11  : Solve, Chief ray follow field 1, wavelength 0
+ Semi Diameter  12      : Fixed
+ Semi Diameter  13      : Fixed
+ 
+INDEX OF REFRACTION DATA:
+
+System Temperature:   20.0000 Celsius
+System Pressure   :    1.0000 Atmospheres
+Absolute air index:    1.000272 at wavelength 0.632800 m
+Index data is relative to air at the system temperature and pressure.
+Wavelengths are measured in air at the system temperature and pressure.
+ 
+Surf                 	 Glass 	   Temp      	Pres  	   0.63280000
+   0 	                       	  20.00 	    1.00  	  1.0000000000	
+   1 	                       	  20.00 	    1.00  	  1.0000000000	
+   2 	                MIRROR 	  20.00 	    1.00  	  1.0000000000	
+   3 	                       	  20.00 	    1.00  	  1.0000000000	
+   4 	                       	  20.00 	    1.00  	  1.0000000000	
+   5 	                       	  20.00 	    1.00  	  1.0000000000	
+   6 	                       	  20.00 	    1.00  	  1.0000000000	
+   7 	                       	  20.00 	    1.00  	  1.0000000000	
+   8 	                       	  20.00 	    1.00  	  1.0000000000	
+   9 	                       	  20.00 	    1.00  	  1.0000000000	
+  10 	                       	  20.00 	    1.00  	  1.0000000000	
+  11 	               <CRD BRK>        	        	  1.0000000000	
+  12 	                       	  20.00 	    1.00  	  1.0000000000	
+  13 	                       	  20.00 	    1.00  	  1.0000000000	
+ 
+THERMAL COEFFICIENT OF EXPANSION DATA:
+
+Surf                  	 Glass     	   TCE * 10E-6
+  0  	                         	  0.0000000000
+  1  	                         	  0.0000000000
+  2  	                MIRROR   	  0.0000000000
+  3  	                         	  0.0000000000
+  4  	                         	  0.0000000000
+  5  	                         	  0.0000000000
+  6  	                         	  0.0000000000
+  7  	                         	  0.0000000000
+  8  	                         	  0.0000000000
+  9  	                         	  0.0000000000
+ 10  	                         	  0.0000000000
+ 11 	               <CRD BRK>  	  0.0000000000
+ 12  	                         	  0.0000000000
+ 13  	                         	  0.0000000000
+ 
+GLOBAL VERTEX COORDINATES, ORIENTATIONS, AND ROTATION/OFFSET MATRICES:
+
+Reference Surface: 2
+
+Surf           	R11           	R12            	R13                 	X          	   Tilt X
+               	R21            	R22            	R23                 	Y          	   Tilt Y
+               	R31            	R32            	R33                 	Z          	   Tilt Z
+
+  1 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	 -5.588000000E+02 	  0.000000000E+00
+
+  2 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	OAP2
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  0.000000000E+00 	  0.000000000E+00
+
+  3 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	OAP Mnt back surf
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  1.700000000E+01 	  0.000000000E+00
+
+  4 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	tape
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  1.852400000E+01 	  0.000000000E+00
+
+  5 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	flat mirror
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  1.863900000E+01 	  0.000000000E+00
+
+  6 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  2.463900000E+01 	  0.000000000E+00
+
+  7 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  1.863900000E+01 	  0.000000000E+00
+
+  8 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  1.852400000E+01 	  0.000000000E+00
+
+  9 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  1.700000000E+01 	  0.000000000E+00
+
+ 10 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  6.000000000E+01 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  0.000000000E+00 	  0.000000000E+00
+
+ 11 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.939395730E+00 	
+    	  0.0000000000 	  0.9878532557 	  0.1553896563 	  0.000000000E+00 	  0.000000000E+00
+    	  0.0000000000 	 -0.1553896563 	  0.9878532557 	 -3.837810000E+02 	  0.000000000E+00
+
+ 12 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.939395730E+00 	
+    	  0.0000000000 	  0.9878532557 	  0.1553896563 	  0.000000000E+00 	  0.000000000E+00
+    	  0.0000000000 	 -0.1553896563 	  0.9878532557 	 -3.837810000E+02 	  0.000000000E+00
+
+ 13 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.939395730E+00 	
+    	  0.0000000000 	  0.9878532557 	  0.1553896563 	 -3.449650369E+01 	  0.000000000E+00
+    	  0.0000000000 	 -0.1553896563 	  0.9878532557 	 -6.030844228E+02 	  0.000000000E+00
+
+ 
+GLOBAL SURFACE CENTER OF CURVATURE POINTS:
+
+Reference Surface: 2
+
+Surf             	X              	Y              	Z
+  1              	-              	-              	- 	
+  2              	-              	-              	- 	OAP2
+  3              	-              	-              	- 	OAP Mnt back surf
+  4              	-              	-              	- 	tape
+  5              	-              	-              	- 	flat mirror
+  6              	-              	-              	- 	
+  7              	-              	-              	- 	
+  8              	-              	-              	- 	
+  9              	-              	-              	- 	
+ 10              	-              	-              	- 	
+ 11              	-              	-              	- 	
+ 12              	-              	-              	- 	
+ 13              	-              	-              	- 	
+ 
+ELEMENT VOLUME DATA:
+
+For centered elements with plane or spherical circular faces, exact
+volumes are computed by assuming edges are squared up to the larger
+of the front and back radial aperture.
+
+For all other elements, approximate volumes are numerically integrated
+to 0.1% accuracy. Zero volume means the volume cannot be accurately computed.
+
+Single elements that are duplicated in the Lens Data Editor
+for ray tracing purposes may be listed more than once yielding
+incorrect total mass estimates.
+
+                            	 Volume cc   	Density g/cc       	Mass g
+Total Mass:                                           	      0.000000
+ 
+F/# DATA:
+
+F/# calculations consider vignetting factors and ignore surface apertures.
+
+     Wavelength:	     	    0.632800    	
+#	            Field       	Tan       	Sag
+1	        0.0000 (deg):	   3.8774 	   3.8775
+ 
+CARDINAL POINTS:
+
+Object space positions are measured with respect to surface 1.
+Image space positions are measured with respect to the image surface.
+The index in both the object space and image space is considered.
+
+                                 	Object Space           	Image Space
+W = 	0.632800	(Primary)
+Focal Length          : 	        -383.781000 	        -383.781000
+Focal Planes          : 	         175.019000 	         222.000000
+Principal Planes      : 	         558.800000 	         605.781000
+Anti-Principal Planes : 	        -208.762000 	        -161.781000
+Nodal Planes          : 	        -208.762000 	        -161.781000
+Anti-Nodal Planes     : 	         558.800000 	         605.781000
+ 
+PHYSICAL OPTICS PROPAGATION SETTINGS SUMMARY:
+
+ OBJ STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+ STO STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   2 IRREGULA                OAP2
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   3 STANDARD   OAP Mnt back surf
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   4 STANDARD                tape
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   5 STANDARD         flat mirror
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   6 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   7 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   8 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   9 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  10 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  11 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  12 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+ IMA STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+ 
+FILES USED:
+
+Zemax File
+  C:\Users\bxin\OneDrive - GMTO Corp\Zemax\HDFS\OAP2.ZOS
+Session File
+  C:\Users\bxin\OneDrive - GMTO Corp\Zemax\HDFS\OAP2.ZDA
+Glass Catalogs
+  C:\Users\bxin\OneDrive - GMTO Corp\Zemax\HDFS\GLASSCAT\SCHOTT.AGF
+Coating Data
+  C:\Users\bxin\OneDrive - GMTO Corp\Zemax\HDFS\COATINGS\COATING.DAT
+ABg Data
+  C:\Users\bxin\OneDrive - GMTO Corp\Zemax\HDFS\ABG_DATA\ABG_DATA.DAT
