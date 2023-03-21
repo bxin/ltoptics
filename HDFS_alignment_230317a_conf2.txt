@@ -1,0 +1,1210 @@
+System/Prescription Data
+
+File : U:\Documents\zemax\HDFS_2303\HDFS_alignment_230316a.ZOS
+Title: NGWS-P HDFS Alignment Configuration
+Date : 3/17/2023
+Configuration 2 of 2
+
+LENS NOTES:
+
+NGWS-P HDFS design.
+f=222 mm 4D reference sphere
+GENERAL LENS DATA:
+
+Surfaces                : 	              49
+Stop                    : 	               1
+System Aperture         : 	Float By Stop Size = 	3.5
+Fast Semi-Diameters     :	On 
+Field Unpolarized       :	On
+Convert thin film phase to ray equivalent :	On 
+J/E Conversion Method   :	X Axis Reference  
+Glass Catalogs          : 	SCHOTT MISC LACROIX 
+Ray Aiming              :	Off
+Apodization             : 	Uniform, factor = 	   0.00000E+00
+Reference OPD           :	Exit Pupil  
+Paraxial Rays Setting   :	Ignore Coordinate Breaks  
+Method to Compute F/#   :	Tracing Rays  
+Method to Compute Huygens Integral   : Auto
+Print Coordinate Breaks :	On
+Multi-Threading         :	On
+OPD Modulo 2 Pi         :	Off
+Temperature (C)         : 	    1.00000E+01
+Pressure (ATM)          : 	    7.60000E-01
+Adjust Index Data To Environment  :	On
+Effective Focal Length  :	        293.8264	(in air at system temperature and pressure)
+Effective Focal Length  :	        293.8264	(in image space)
+Back Focal Length       :	        208.5663
+Total Track             :	         621.425
+Image Space F/#         :	         41.9752
+Paraxial Working F/#    :	         41.9752
+Working F/#             :	        38.68231
+Image Space NA          :	      0.01191095
+Object Space NA         :	         3.5e-10
+Stop Radius             :	             3.5
+Paraxial Image Height   :	               0
+Paraxial Magnification  :	               0
+Entrance Pupil Diameter :	               7
+Entrance Pupil Position :	               0
+Exit Pupil Diameter     :	        1.961824
+Exit Pupil Position     :	       -75.87615
+Field Type              : 	Angle in degrees
+Maximum Radial Field    :	               0
+Primary Wavelength [m] :	            0.81
+Angular Magnification   :	        3.485335
+Lens Units              :	   Millimeters
+Source Units            :	   Watts 
+Analysis Units          :	   Watts/cm^2 
+Afocal Mode Units       :	   milliradians
+MTF Units               :	   cycles/millimeter 
+Include Calculated Data in Session File  :	On 
+Include Calculated Data in Session File  :	On 
+ 
+Fields          : 1
+Field Type              : 	Angle in degrees
+ #  	   X-Value     	  Y-Value     	   Weight
+ 1 	      0.000000 	      0.000000 	      1.000000
+ 
+Vignetting Factors
+ #     	VDX     	VDY     	VCX     	VCY     	VAN
+ 1 	 0.000000 	 0.000000 	 0.000000 	 0.000000 	 0.000000
+ 
+Wavelengths     : 3
+Units: m
+ #       	Value       	Weight
+ 1 	      0.810000 	      1.000000
+ 2 	      0.700000 	      1.000000
+ 3 	      0.920000 	      1.000000
+ 
+Predicted coordinate ABCD matrix:
+A = 	       270.7
+B = 	           0
+C = 	           0
+D = 	       270.7
+ 
+SURFACE DATA SUMMARY:
+
+Surf       	Type        	Radius        	Thickness           	Glass      	  Clear Diam   	  Chip Zone  	  Mech Diam       	   Conic        	Comment
+ OBJ	 STANDARD	       Infinity	       Infinity	                     	             0	             0	             0	              0	 
+ STO	 STANDARD	       Infinity	              0	                     	             7	             0	             7	              0	 Stop
+   2	 PARAXIAL	              -	         136.71	                     	             7	             0	             7	              -	 222 mm lens
+   3	 COORDBRK	              -	              0	                     	             -	             -	             -	              -	 
+   4	 STANDARD	       Infinity	              0	               MIRROR	      3.864201	             0	          25.4	              0	 Cal Fold 1
+   5	 COORDBRK	              -	         -85.29	                     	             -	             -	             -	              -	 
+   6	 STANDARD	       Infinity	      -316.6165	                     	  4.884981e-15	             0	            10	              0	 Intermediate Focus
+   7	 COORDBRK	              -	         -1.986	                     	             -	             -	             -	              -	 
+   8	 IRREGULA	         629.26	          1.986	               MIRROR	            35	             0	          50.8	             -1	 OAP 1
+   9	 STANDARD	       Infinity	            -15	                     	      9.988878	             0	      9.988878	              0	 OAP front
+  10	 STANDARD	       Infinity	         -1.524	                     	      9.988871	             0	      9.988871	              0	 OAP back
+  11	 STANDARD	       Infinity	         -0.115	                     	       9.98887	             0	       9.98887	              0	 Mount back
+  12	 STANDARD	       Infinity	           -7.8	                     	       9.98887	             0	          76.2	              0	 Tape back
+  13	 STANDARD	       Infinity	            7.8	                     	      9.988866	             0	          76.2	              0	 Flat mirror
+  14	 STANDARD	       Infinity	          0.115	                     	       9.98887	             0	       9.98887	              0	 
+  15	 STANDARD	       Infinity	          1.524	                     	       9.98887	             0	       9.98887	              0	 
+  16	 STANDARD	       Infinity	             15	                     	      9.988871	             0	      9.988871	              0	 
+  17	 STANDARD	       Infinity	            350	                     	      9.988878	             0	      9.988878	              0	 
+  18	 STANDARD	       Infinity	            225	                     	      9.989054	             0	      9.989054	              0	 Fold 2
+  19	 STANDARD	       Infinity	           -225	                     	      9.989168	             0	          50.8	              0	 Return flat
+  20	 COORDBRK	              -	              0	                     	             -	             -	             -	              -	 
+  21	 STANDARD	       Infinity	              0	               MIRROR	      10.11357	             0	          25.4	              0	 Fold 2
+  22	 COORDBRK	              -	              0	                     	             -	             -	             -	              -	 
+  23	 STANDARD	       Infinity	      -151.8631	                     	      9.989054	             0	      9.989054	              0	 
+  24	 STANDARD	       Infinity	              0	                     	      9.989131	             0	      9.989131	              0	 
+  25	 STANDARD	       Infinity	              0	                     	      9.989131	             0	      9.989131	              0	 Pupil Position
+  26	 STANDARD	       Infinity	             -5	               SILICA	      9.989131	             0	          25.4	              0	 Phase mask front
+  27	 STANDARD	       Infinity	      -175.0009	                     	      9.989133	             0	          25.4	              0	 Phase mask back
+  28	 STANDARD	       Infinity	            -17	                     	      9.989221	             0	      9.989221	              0	 OAP front
+  29	 STANDARD	       Infinity	         -1.524	                     	      9.989229	             0	      9.989229	              0	 OAP back
+  30	 STANDARD	       Infinity	         -0.115	                     	       9.98923	             0	       9.98923	              0	 Mount back
+  31	 STANDARD	       Infinity	             -6	                     	       9.98923	             0	       9.98923	              0	 Tape back
+  32	 STANDARD	       Infinity	              6	                     	      9.989233	             0	          76.2	              0	 Flat mirror
+  33	 STANDARD	       Infinity	          0.115	                     	       9.98923	             0	          76.2	              0	 
+  34	 STANDARD	       Infinity	          1.524	                     	       9.98923	             0	       9.98923	              0	 
+  35	 STANDARD	       Infinity	             17	                     	      9.989229	             0	      9.989229	              0	 
+  36	 COORDBRK	              -	       -2.32438	                     	             -	             -	             -	              -	 
+  37	 IRREGULA	        767.562	        2.32438	               MIRROR	            18	             0	          50.8	             -1	 OAP 2
+  38	 COORDBRK	              -	        367.659	                     	             -	             -	             -	              -	 
+  39	 COORDBRK	              -	              0	                     	             -	             -	             -	              -	 
+  40	 STANDARD	       Infinity	        -116.11	                     	  0.0001013237	             0	  0.0001013237	              0	 
+  41	 STANDARD	       Infinity	              0	                     	      3.005498	             0	      3.005498	              0	 
+  42	 COORDBRK	              -	              0	                     	             -	             -	             -	              -	 
+  43	 STANDARD	       Infinity	              0	               MIRROR	      4.296284	             0	          25.4	              0	 Cal Fold 2
+  44	 COORDBRK	              -	        -116.11	                     	             -	             -	             -	              -	 
+  45	 STANDARD	       Infinity	           -200	                     	  0.0001013237	             0	  0.0001013237	              0	 Folded Focus
+  46	 STANDARD	            200	            200	               MIRROR	      5.176277	             0	          25.4	              0	 Spherical mirror
+  48	 STANDARD	       Infinity	              0	                     	  0.0001013237	             0	            10	              0	 Direct Focus
+ IMA	 STANDARD	       Infinity	               	                     	  0.0001013237	             0	  0.0001013237	              0	 
+ 
+
+
+SURFACE DATA DETAIL:
+
+Surface OBJ STANDARD 
+
+Surface STO STANDARD Stop
+
+Surface   2 PARAXIAL 222 mm lens
+Focal length             :              222
+OPD Mode                 :                1
+
+Surface   3 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :                0
+Tilt About Y             :              -45
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface   4 STANDARD Cal Fold 1
+Mirror Substrate         : Flat, Thickness = 6.00000E+00
+
+Surface   5 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :                0
+Tilt About Y             :              -45
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface   6 STANDARD Intermediate Focus
+
+Surface   7 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :               -0
+Tilt About Y             :        9.0861731
+Tilt About Z             :                0
+Order                    : Tilt then decenter
+
+Surface   8 IRREGULA OAP 1
+Mirror Substrate         : Flat, Thickness = 1.20000E+01
+Decenter X               :              -50
+Decenter Y               :                0
+Tilt X                   :               -0
+Tilt Y                   :               -0
+Spherical                :               -0
+Astigmatism              :               -0
+Coma                     :               -0
+Angle                    :                0
+Aperture                 : Floating Aperture
+Maximum Radius           :             17.5
+
+Surface   9 STANDARD OAP front
+
+Surface  10 STANDARD OAP back
+
+Surface  11 STANDARD Mount back
+
+Surface  12 STANDARD Tape back
+
+Surface  13 STANDARD Flat mirror
+
+Surface  14 STANDARD 
+
+Surface  15 STANDARD 
+
+Surface  16 STANDARD 
+
+Surface  17 STANDARD 
+
+Surface  18 STANDARD Fold 2
+
+Surface  19 STANDARD Return flat
+
+Surface  20 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :                0
+Tilt About Y             :               -9
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  21 STANDARD Fold 2
+Mirror Substrate         : Flat, Thickness = 6.00000E+00
+
+Surface  22 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :               -0
+Tilt About Y             :               -9
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  23 STANDARD 
+
+Surface  24 STANDARD 
+
+Surface  25 STANDARD Pupil Position
+
+Surface  26 STANDARD Phase mask front
+
+Surface  27 STANDARD Phase mask back
+
+Surface  28 STANDARD OAP front
+
+Surface  29 STANDARD OAP back
+
+Surface  30 STANDARD Mount back
+
+Surface  31 STANDARD Tape back
+
+Surface  32 STANDARD Flat mirror
+
+Surface  33 STANDARD 
+
+Surface  34 STANDARD 
+
+Surface  35 STANDARD 
+
+Surface  36 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :                0
+Tilt About Y             :                0
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  37 IRREGULA OAP 2
+Mirror Substrate         : Flat, Thickness = 1.20000E+01
+Decenter X               :               60
+Decenter Y               :                0
+Tilt X                   :                0
+Tilt Y                   :                0
+Spherical                :                0
+Astigmatism              :                0
+Coma                     :                0
+Angle                    :                0
+Aperture                 : Floating Aperture
+Maximum Radius           :                9
+
+Surface  38 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :                0
+Tilt About Y             :        -8.860776
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  39 COORDBRK 
+Decenter X               :        118.04032
+Decenter Y               :                0
+Tilt About X             :                0
+Tilt About Y             :        17.800173
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  40 STANDARD 
+
+Surface  41 STANDARD 
+
+Surface  42 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :                0
+Tilt About Y             :              -45
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  43 STANDARD Cal Fold 2
+Mirror Substrate         : Flat, Thickness = 6.00000E+00
+
+Surface  44 COORDBRK 
+Decenter X               :                0
+Decenter Y               :                0
+Tilt About X             :               -0
+Tilt About Y             :              -45
+Tilt About Z             :                0
+Order                    : Decenter then tilt
+
+Surface  45 STANDARD Folded Focus
+
+Surface  46 STANDARD Spherical mirror
+Mirror Substrate         : Flat, Thickness = 6.00000E+00
+
+Surface  48 STANDARD Direct Focus
+
+Surface IMA STANDARD 
+ 
+EDGE THICKNESS DATA:
+
+Surf        	 X-Edge        	 Y-Edge
+ STO 	      0.000000 	      0.000000
+   2 	    136.710000 	    136.710000
+   3 	      0.000000 	      0.000000
+   4 	      0.000000 	      0.000000
+   5 	    -85.290000 	    -85.290000
+   6 	   -316.616460 	   -316.616460
+   7 	      1.634324 	      0.243802
+   8 	     -1.634324 	     -0.243802
+   9 	    -15.000000 	    -15.000000
+  10 	     -1.524000 	     -1.524000
+  11 	     -0.115000 	     -0.115000
+  12 	     -7.800000 	     -7.800000
+  13 	      7.800000 	      7.800000
+  14 	      0.115000 	      0.115000
+  15 	      1.524000 	      1.524000
+  16 	     15.000000 	     15.000000
+  17 	    350.000000 	    350.000000
+  18 	    225.000000 	    225.000000
+  19 	   -225.000000 	   -225.000000
+  20 	      0.000000 	      0.000000
+  21 	      0.000000 	      0.000000
+  22 	      0.000000 	      0.000000
+  23 	   -151.863098 	   -151.863098
+  24 	      0.000000 	      0.000000
+  25 	      0.000000 	      0.000000
+  26 	     -5.000000 	     -5.000000
+  27 	   -175.000881 	   -175.000881
+  28 	    -17.000000 	    -17.000000
+  29 	     -1.524000 	     -1.524000
+  30 	     -0.115000 	     -0.115000
+  31 	     -6.000000 	     -6.000000
+  32 	      6.000000 	      6.000000
+  33 	      0.115000 	      0.115000
+  34 	      1.524000 	      1.524000
+  35 	     17.000000 	     17.000000
+  36 	     -0.630054 	      0.073472
+  37 	      0.630054 	     -0.073472
+  38 	    367.659000 	    367.659000
+  39 	      0.000000 	      0.000000
+  40 	   -116.110000 	   -116.110000
+  41 	      0.000000 	      0.000000
+  42 	      0.000000 	      0.000000
+  43 	      0.000000 	      0.000000
+  44 	   -116.110000 	   -116.110000
+  45 	   -199.983253 	   -199.983253
+  46 	    199.983253 	    199.983253
+  48 	      0.000000 	      0.000000
+ IMA 	      0.000000 	      0.000000
+ 
+MULTI-CONFIGURATION DATA:
+
+Configuration   1:
+
+  1 Ignore    41-46 :             1 
+  2 Ignore    47-47 :             0 
+
+Configuration   2:
+
+  1 Ignore    41-46 :             0 
+  2 Ignore    47-47 :             1 
+ 
+SOLVE AND VARIABLE DATA:
+
+ Semi Diameter   1      : Fixed
+ Mech Semi Diameter   4 : Fixed
+ Parameter  4 Surf   5  : Solve, Pickup from surface 3 scaled by 1, offset by 0
+ Mech Semi Diameter   6 : Fixed
+ Thickness of   8       : Solve, Pickup from surface 7 scaled by -1, offset by 0
+ Semi Diameter   8      : Fixed
+ Mech Semi Diameter   8 : Fixed
+ Mech Semi Diameter  12 : Fixed
+ Thickness of  13       : Solve, Pickup from surface 12 scaled by -1, offset by 0
+ Mech Semi Diameter  13 : Solve, pickup from surface 12 scaled by 1
+ Thickness of  14       : Solve, Pickup from surface 11 scaled by -1, offset by 0
+ Thickness of  15       : Solve, Pickup from surface 10 scaled by -1, offset by 0
+ Thickness of  16       : Solve, Pickup from surface 9 scaled by -1, offset by 0
+ Thickness of  19       : Solve, Pickup from surface 18 scaled by -1, offset by 0
+ Mech Semi Diameter  19 : Fixed
+ Mech Semi Diameter  21 : Fixed
+ Thickness of  25       : Solve, Pickup from surface 24 scaled by -1, offset by 0
+ Mech Semi Diameter  26 : Fixed
+ Thickness of  32       : Solve, Pickup from surface 31 scaled by -1, offset by 0
+ Mech Semi Diameter  32 : Fixed
+ Thickness of  33       : Solve, Pickup from surface 30 scaled by -1, offset by 0
+ Mech Semi Diameter  33 : Solve, pickup from surface 32 scaled by 1
+ Thickness of  34       : Solve, Pickup from surface 29 scaled by -1, offset by 0
+ Thickness of  35       : Solve, Pickup from surface 28 scaled by -1, offset by 0
+ Thickness of  37       : Solve, Pickup from surface 36 scaled by -1, offset by -0
+ Semi Diameter  37      : Fixed
+ Mech Semi Diameter  37 : Fixed
+ Parameter  1 Surf  39  : Solve, Chief ray follow field 1, wavelength 0
+ Parameter  4 Surf  39  : Solve, Chief ray follow field 1, wavelength 0
+ Mech Semi Diameter  43 : Fixed
+ Parameter  4 Surf  44  : Solve, Pickup from surface 42 scaled by 1, offset by 0
+ Mech Semi Diameter  46 : Fixed
+ Thickness of  47       : Solve, Pickup from surface 40 scaled by -1, offset by 0
+ Mech Semi Diameter  48 : Fixed
+ 
+INDEX OF REFRACTION DATA:
+
+System Temperature:   10.0000 Celsius
+System Pressure   :    0.7600 Atmospheres
+Absolute air index:    1.000213 at wavelength 0.810000 m
+Index data is relative to air at the system temperature and pressure.
+Wavelengths are measured in air at the system temperature and pressure.
+ 
+Surf                 	 Glass 	   Temp      	Pres  	   0.81000000	   0.70000000	   0.92000000
+   0 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+   1 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+   2 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+   3 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+   4 	                MIRROR 	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+   5 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+   6 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+   7 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+   8 	                MIRROR 	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+   9 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  10 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  11 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  12 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  13 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  14 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  15 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  16 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  17 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  18 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  19 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  20 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+  21 	                MIRROR 	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  22 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+  23 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  24 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  25 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  26 	                SILICA 	  10.00 	    0.76  	  1.4531452818	  1.4552915342	  1.4514715367	 source:  Handbook of Optics Vol. II
+  27 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  28 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  29 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  30 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  31 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  32 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  33 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  34 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  35 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  36 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+  37 	                MIRROR 	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  38 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+  39 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+  40 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  41 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  42 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+  43 	                MIRROR 	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  44 	               <CRD BRK>        	        	  1.0000000000	  1.0000000000	  1.0000000000	
+  45 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  46 	                MIRROR 	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  48 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+  49 	                       	  10.00 	    0.76  	  1.0000000000	  1.0000000000	  1.0000000000	
+ 
+THERMAL COEFFICIENT OF EXPANSION DATA:
+
+Surf                  	 Glass     	   TCE * 10E-6
+  0  	                         	  0.0000000000
+  1  	                         	  0.0000000000
+  2  	                         	  0.0000000000
+  3 	               <CRD BRK>  	  0.0000000000
+  4  	                MIRROR   	  0.0000000000
+  5 	               <CRD BRK>  	  0.0000000000
+  6  	                         	  0.0000000000
+  7 	               <CRD BRK>  	  0.0000000000
+  8  	                MIRROR   	  0.0000000000
+  9  	                         	  0.0000000000
+ 10  	                         	  0.0000000000
+ 11  	                         	  0.0000000000
+ 12  	                         	  0.0000000000
+ 13  	                         	  0.0000000000
+ 14  	                         	  0.0000000000
+ 15  	                         	  0.0000000000
+ 16  	                         	  0.0000000000
+ 17  	                         	  0.0000000000
+ 18  	                         	  0.0000000000
+ 19  	                         	  0.0000000000
+ 20 	               <CRD BRK>  	  0.0000000000
+ 21  	                MIRROR   	  0.0000000000
+ 22 	               <CRD BRK>  	  0.0000000000
+ 23  	                         	  0.0000000000
+ 24  	                         	  0.0000000000
+ 25  	                         	  0.0000000000
+ 26  	                SILICA   	  0.5100000000	 source:  Handbook of Optics Vol. II
+ 27  	                         	  0.0000000000
+ 28  	                         	  0.0000000000
+ 29  	                         	  0.0000000000
+ 30  	                         	  0.0000000000
+ 31  	                         	  0.0000000000
+ 32  	                         	  0.0000000000
+ 33  	                         	  0.0000000000
+ 34  	                         	  0.0000000000
+ 35  	                         	  0.0000000000
+ 36 	               <CRD BRK>  	  0.0000000000
+ 37  	                MIRROR   	  0.0000000000
+ 38 	               <CRD BRK>  	  0.0000000000
+ 39 	               <CRD BRK>  	  0.0000000000
+ 40  	                         	  0.0000000000
+ 41  	                         	  0.0000000000
+ 42 	               <CRD BRK>  	  0.0000000000
+ 43  	                MIRROR   	  0.0000000000
+ 44 	               <CRD BRK>  	  0.0000000000
+ 45  	                         	  0.0000000000
+ 46  	                MIRROR   	  0.0000000000
+ 48  	                         	  0.0000000000
+ 49  	                         	  0.0000000000
+ 
+GLOBAL VERTEX COORDINATES, ORIENTATIONS, AND ROTATION/OFFSET MATRICES:
+
+Reference Surface: 1
+
+Surf           	R11           	R12            	R13                 	X          	   Tilt X
+               	R21            	R22            	R23                 	Y          	   Tilt Y
+               	R31            	R32            	R33                 	Z          	   Tilt Z
+
+  1 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	Stop
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  0.000000000E+00 	  0.000000000E+00
+
+  2 	  1.0000000000 	  0.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00 	222 mm lens
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	  0.000000000E+00
+    	  0.0000000000 	  0.0000000000 	  1.0000000000 	  0.000000000E+00 	  0.000000000E+00
+
+  3 	  0.7071067812 	  0.0000000000 	 -0.7071067812 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -4.500000000E+01
+    	  0.7071067812 	  0.0000000000 	  0.7071067812 	  1.367100000E+02 	  0.000000000E+00
+
+  4 	  0.7071067812 	  0.0000000000 	 -0.7071067812 	  0.000000000E+00 	  0.000000000E+00 	Cal Fold 1
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -4.500000000E+01
+    	  0.7071067812 	  0.0000000000 	  0.7071067812 	  1.367100000E+02 	  0.000000000E+00
+
+  5 	  0.0000000000 	  0.0000000000 	 -1.0000000000 	  0.000000000E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -9.000000000E+01
+    	  1.0000000000 	  0.0000000000 	  0.0000000000 	  1.367100000E+02 	  0.000000000E+00
+
+  6 	  0.0000000000 	  0.0000000000 	 -1.0000000000 	  8.529000000E+01 	  0.000000000E+00 	Intermediate Focus
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -9.000000000E+01
+    	  1.0000000000 	  0.0000000000 	  0.0000000000 	  1.367100000E+02 	  0.000000000E+00
+
+  7 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.019064603E+02 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.367100000E+02 	  0.000000000E+00
+
+  8 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.038675399E+02 	  0.000000000E+00 	OAP 1
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.363963713E+02 	  0.000000000E+00
+
+  9 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.019064603E+02 	  0.000000000E+00 	OAP front
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.367100000E+02 	  0.000000000E+00
+
+ 10 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.167182395E+02 	  0.000000000E+00 	OAP back
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.343412034E+02 	  0.000000000E+00
+
+ 11 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.182231162E+02 	  0.000000000E+00 	Mount back
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.341005336E+02 	  0.000000000E+00
+
+ 12 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.183366732E+02 	  0.000000000E+00 	Tape back
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.340823729E+02 	  0.000000000E+00
+
+ 13 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.260387984E+02 	  0.000000000E+00 	Flat mirror
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.328505986E+02 	  0.000000000E+00
+
+ 14 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.183366732E+02 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.340823729E+02 	  0.000000000E+00
+
+ 15 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.182231162E+02 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.341005336E+02 	  0.000000000E+00
+
+ 16 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.167182395E+02 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.343412034E+02 	  0.000000000E+00
+
+ 17 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  4.019064603E+02 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.367100000E+02 	  0.000000000E+00
+
+ 18 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	  5.629827933E+01 	  0.000000000E+00 	Fold 2
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  1.919819211E+02 	  0.000000000E+00
+
+ 19 	  0.1579197745 	  0.0000000000 	 -0.9874519456 	 -1.658784084E+02 	  0.000000000E+00 	Return flat
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.091382694E+01
+    	  0.9874519456 	  0.0000000000 	  0.1579197745 	  2.275138703E+02 	  0.000000000E+00
+
+ 20 	  0.0015040031 	  0.0000000000 	 -0.9999988690 	  5.629827933E+01 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.991382694E+01
+    	  0.9999988690 	  0.0000000000 	  0.0015040031 	  1.919819211E+02 	  0.000000000E+00
+
+ 21 	  0.0015040031 	  0.0000000000 	 -0.9999988690 	  5.629827933E+01 	  0.000000000E+00 	Fold 2
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.991382694E+01
+    	  0.9999988690 	  0.0000000000 	  0.0015040031 	  1.919819211E+02 	  0.000000000E+00
+
+ 22 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  5.629827933E+01 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  1.919819211E+02 	 -1.800000000E+02
+
+ 23 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  5.629827933E+01 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  1.919819211E+02 	 -1.800000000E+02
+
+ 24 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  2.063272510E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.155129261E+02 	 -1.800000000E+02
+
+ 25 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  2.063272510E+02 	 -1.800000000E+02 	Pupil Position
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.155129261E+02 	 -1.800000000E+02
+
+ 26 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  2.063272510E+02 	 -1.800000000E+02 	Phase mask front
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.155129261E+02 	 -1.800000000E+02
+
+ 27 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  2.112668635E+02 	 -1.800000000E+02 	Phase mask back
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.162876701E+02 	 -1.800000000E+02
+
+ 28 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  3.841541714E+02 	 -1.800000000E+02 	OAP front
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.434038469E+02 	 -1.800000000E+02
+
+ 29 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  4.009488539E+02 	 -1.800000000E+02 	OAP back
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.460379766E+02 	 -1.800000000E+02
+
+ 30 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  4.024544478E+02 	 -1.800000000E+02 	Mount back
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.462741185E+02 	 -1.800000000E+02
+
+ 31 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  4.025680589E+02 	 -1.800000000E+02 	Tape back
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.462919376E+02 	 -1.800000000E+02
+
+ 32 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  4.084955939E+02 	 -1.800000000E+02 	Flat mirror
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.472216304E+02 	 -1.800000000E+02
+
+ 33 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  4.025680589E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.462919376E+02 	 -1.800000000E+02
+
+ 34 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  4.024544478E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.462741185E+02 	 -1.800000000E+02
+
+ 35 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  4.009488539E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.460379766E+02 	 -1.800000000E+02
+
+ 36 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  3.841541714E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.434038469E+02 	 -1.800000000E+02
+
+ 37 	 -0.1549488018 	  0.0000000000 	 -0.9879225014 	  3.864504789E+02 	 -1.800000000E+02 	OAP 2
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.108617306E+01
+    	  0.9879225014 	  0.0000000000 	 -0.1549488018 	  2.437640068E+02 	 -1.800000000E+02
+
+ 38 	 -0.3052732313 	  0.0000000000 	 -0.9522648026 	  3.841541714E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -7.222539709E+01
+    	  0.9522648026 	  0.0000000000 	 -0.3052732313 	  2.434038469E+02 	 -1.800000000E+02
+
+ 39 	  0.0004462744 	  0.0000000000 	 -0.9999999004 	 -1.989103763E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.997443036E+01
+    	  0.9999999004 	  0.0000000000 	  0.0004462744 	  2.435730386E+02 	  0.000000000E+00
+
+ 40 	  0.0004462744 	  0.0000000000 	 -0.9999999004 	 -1.989103763E+00 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.997443036E+01
+    	  0.9999999004 	  0.0000000000 	  0.0004462744 	  2.435730386E+02 	  0.000000000E+00
+
+ 41 	  0.0004462744 	  0.0000000000 	 -0.9999999004 	  1.141208847E+02 	  0.000000000E+00 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -8.997443036E+01
+    	  0.9999999004 	  0.0000000000 	  0.0004462744 	  2.435212217E+02 	  0.000000000E+00
+
+ 42 	 -0.7067911471 	  0.0000000000 	 -0.7074222744 	  1.141208847E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -4.502556964E+01
+    	  0.7074222744 	  0.0000000000 	 -0.7067911471 	  2.435212217E+02 	 -1.800000000E+02
+
+ 43 	 -0.7067911471 	  0.0000000000 	 -0.7074222744 	  1.141208847E+02 	 -1.800000000E+02 	Cal Fold 2
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -4.502556964E+01
+    	  0.7074222744 	  0.0000000000 	 -0.7067911471 	  2.435212217E+02 	 -1.800000000E+02
+
+ 44 	 -0.9999999004 	  0.0000000000 	 -0.0004462744 	  1.141208847E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -2.556964122E-02
+    	  0.0004462744 	  0.0000000000 	 -0.9999999004 	  2.435212217E+02 	 -1.800000000E+02
+
+ 45 	 -0.9999999004 	  0.0000000000 	 -0.0004462744 	  1.141727016E+02 	 -1.800000000E+02 	Folded Focus
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -2.556964122E-02
+    	  0.0004462744 	  0.0000000000 	 -0.9999999004 	  3.596312101E+02 	 -1.800000000E+02
+
+ 46 	 -0.9999999004 	  0.0000000000 	 -0.0004462744 	  1.142619565E+02 	 -1.800000000E+02 	Spherical mirror
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -2.556964122E-02
+    	  0.0004462744 	  0.0000000000 	 -0.9999999004 	  5.596311902E+02 	 -1.800000000E+02
+
+ 48 	 -0.9999999004 	  0.0000000000 	 -0.0004462744 	  1.141727016E+02 	 -1.800000000E+02 	Direct Focus
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -2.556964122E-02
+    	  0.0004462744 	  0.0000000000 	 -0.9999999004 	  3.596312101E+02 	 -1.800000000E+02
+
+ 49 	 -0.9999999004 	  0.0000000000 	 -0.0004462744 	  1.141727016E+02 	 -1.800000000E+02 	
+    	  0.0000000000 	  1.0000000000 	  0.0000000000 	  0.000000000E+00 	 -2.556964122E-02
+    	  0.0004462744 	  0.0000000000 	 -0.9999999004 	  3.596312101E+02 	 -1.800000000E+02
+
+ 
+GLOBAL SURFACE CENTER OF CURVATURE POINTS:
+
+Reference Surface: 1
+
+Surf             	X              	Y              	Z
+  1              	-              	-              	- 	Stop
+  2              	-              	-              	- 	222 mm lens
+  3              	-              	-              	- 	
+  4              	-              	-              	- 	Cal Fold 1
+  5              	-              	-              	- 	
+  6              	-              	-              	- 	Intermediate Focus
+  7              	-              	-              	- 	
+  8              	-              	-              	- 	OAP 1
+  9              	-              	-              	- 	OAP front
+ 10              	-              	-              	- 	OAP back
+ 11              	-              	-              	- 	Mount back
+ 12              	-              	-              	- 	Tape back
+ 13              	-              	-              	- 	Flat mirror
+ 14              	-              	-              	- 	
+ 15              	-              	-              	- 	
+ 16              	-              	-              	- 	
+ 17              	-              	-              	- 	
+ 18              	-              	-              	- 	Fold 2
+ 19              	-              	-              	- 	Return flat
+ 20              	-              	-              	- 	
+ 21              	-              	-              	- 	Fold 2
+ 22              	-              	-              	- 	
+ 23              	-              	-              	- 	
+ 24              	-              	-              	- 	
+ 25              	-              	-              	- 	Pupil Position
+ 26              	-              	-              	- 	Phase mask front
+ 27              	-              	-              	- 	Phase mask back
+ 28              	-              	-              	- 	OAP front
+ 29              	-              	-              	- 	OAP back
+ 30              	-              	-              	- 	Mount back
+ 31              	-              	-              	- 	Tape back
+ 32              	-              	-              	- 	Flat mirror
+ 33              	-              	-              	- 	
+ 34              	-              	-              	- 	
+ 35              	-              	-              	- 	
+ 36              	-              	-              	- 	
+ 37              	-              	-              	- 	OAP 2
+ 38              	-              	-              	- 	
+ 39              	-              	-              	- 	
+ 40              	-              	-              	- 	
+ 41              	-              	-              	- 	
+ 42              	-              	-              	- 	
+ 43              	-              	-              	- 	Cal Fold 2
+ 44              	-              	-              	- 	
+ 45              	-              	-              	- 	Folded Focus
+ 46 	114.1727015972 	  0.0000000000 	359.6312101130 	Spherical mirror
+ 48              	-              	-              	- 	Direct Focus
+ 49              	-              	-              	- 	
+ 
+ELEMENT VOLUME DATA:
+
+For centered elements with plane or spherical circular faces, exact
+volumes are computed by assuming edges are squared up to the larger
+of the front and back radial aperture.
+
+For all other elements, approximate volumes are numerically integrated
+to 0.1% accuracy. Zero volume means the volume cannot be accurately computed.
+
+Single elements that are duplicated in the Lens Data Editor
+for ray tracing purposes may be listed more than once yielding
+incorrect total mass estimates.
+
+                            	 Volume cc   	Density g/cc       	Mass g
+Element surf  26 to 27  	      2.533537 	      2.200000 	      5.573782
+Total Mass:                                           	      5.573782
+ 
+F/# DATA:
+
+F/# calculations consider vignetting factors and ignore surface apertures.
+
+     Wavelength:	     	    0.810000    	     	    0.700000    	     	    0.920000    	
+#	            Field       	Tan       	Sag      	Tan       	Sag      	Tan       	Sag
+1	        0.0000 (deg):	  38.6824 	  38.6823	  38.6824 	  38.6823	  38.6824 	  38.6823
+ 
+CARDINAL POINTS:
+
+Object space positions are measured with respect to surface 1.
+Image space positions are measured with respect to the image surface.
+The index in both the object space and image space is considered.
+
+                                 	Object Space           	Image Space
+W = 	0.810000	(Primary)
+Focal Length          : 	        -293.826429 	         293.826429
+Focal Planes          : 	       -1024.083664 	           8.566269
+Principal Planes      : 	        -730.257235 	        -285.260160
+Anti-Principal Planes : 	       -1317.910093 	         302.392698
+Nodal Planes          : 	        -730.257235 	        -285.260160
+Anti-Nodal Planes     : 	       -1317.910093 	         302.392698
+
+W = 	0.700000	
+Focal Length          : 	        -293.826373 	         293.826373
+Focal Planes          : 	       -1024.085874 	           8.566270
+Principal Planes      : 	        -730.259501 	        -285.260103
+Anti-Principal Planes : 	       -1317.912247 	         302.392643
+Nodal Planes          : 	        -730.259501 	        -285.260103
+Anti-Nodal Planes     : 	       -1317.912247 	         302.392643
+
+W = 	0.920000	
+Focal Length          : 	        -293.826473 	         293.826473
+Focal Planes          : 	       -1024.081936 	           8.566267
+Principal Planes      : 	        -730.255463 	        -285.260205
+Anti-Principal Planes : 	       -1317.908409 	         302.392740
+Nodal Planes          : 	        -730.255463 	        -285.260205
+Anti-Nodal Planes     : 	       -1317.908409 	         302.392740
+ 
+PHYSICAL OPTICS PROPAGATION SETTINGS SUMMARY:
+
+ OBJ STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+ STO STANDARD                Stop
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   2 PARAXIAL         222 mm lens
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   3 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   4 STANDARD          Cal Fold 1
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   5 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   6 STANDARD  Intermediate Focus
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   7 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   8 IRREGULA               OAP 1
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+   9 STANDARD           OAP front
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  10 STANDARD            OAP back
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  11 STANDARD          Mount back
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  12 STANDARD           Tape back
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  13 STANDARD         Flat mirror
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  14 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  15 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  16 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  17 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  18 STANDARD              Fold 2
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  19 STANDARD         Return flat
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  20 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  21 STANDARD              Fold 2
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  22 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  23 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  24 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  25 STANDARD      Pupil Position
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  26 STANDARD    Phase mask front
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  27 STANDARD     Phase mask back
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  28 STANDARD           OAP front
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  29 STANDARD            OAP back
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  30 STANDARD          Mount back
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  31 STANDARD           Tape back
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  32 STANDARD         Flat mirror
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  33 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  34 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  35 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  36 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  37 IRREGULA               OAP 2
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  38 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  39 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  40 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  41 STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  42 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  43 STANDARD          Cal Fold 2
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  44 COORDBRK                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  45 STANDARD        Folded Focus
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  46 STANDARD    Spherical mirror
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+  48 STANDARD        Direct Focus
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+ IMA STANDARD                    
+Use Rays To Propagate To Next Surface  : Off
+Recompute Pilot Beam                   : Off
+Do Not Rescale Beam Size Using Ray Data: Off
+Use Angular Spectrum Propagator        : Off
+Use X-Axis Reference                   : Off
+Output Pilot Radius                    : Best Fit
+ 
+FILES USED:
+
+Zemax File
+  U:\Documents\zemax\HDFS_2303\HDFS_alignment_230316a.ZOS
+Session File
+  U:\Documents\zemax\HDFS_2303\HDFS_alignment_230316a.ZDA
+Glass Catalogs
+  C:\Users\abouchez\Documents\Zemax\GLASSCAT\SCHOTT.AGF
+  C:\Users\abouchez\Documents\Zemax\GLASSCAT\MISC.AGF
+  C:\Users\abouchez\Documents\Zemax\GLASSCAT\LACROIX.AGF
+Coating Data
+  C:\Users\abouchez\Documents\Zemax\COATINGS\COATING.DAT
+ABg Data
+  C:\Users\abouchez\Documents\Zemax\ABG_DATA\ABG_DATA.DAT
